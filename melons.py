@@ -1,3 +1,4 @@
+"""melon"""
 import robots
 
 
@@ -32,4 +33,13 @@ class Melon:
 
 # FIXME: Add Squash class definition here.
 class Squash(Melon):
-    pass
+    """Add a Squash class to melons.py to handle winter squashes."""
+    def __init__(self, melon_type):
+        super().__init__('squash')
+
+    def prep(self):
+        """ prep and paint"""
+        robots.cleanerbot.clean(self)
+        robots.stickerbot.apply_logo(self)
+        robots.painterbot.paint(self)
+        
